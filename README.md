@@ -2,6 +2,20 @@
 
 Marginalia TV is a re-scope of the original book-series recap prototype for serialized TV shows.
 
+The deployable Next.js prototype lives at the repository root so Vercel can auto-detect and build the app. Product artifacts remain in the numbered folders:
+
+- `01-research/`
+- `02-competitive-analysis/`
+- `03-prd-and-evals/`
+- `05-product-design-story/`
+
+Run locally:
+
+```bash
+npm install
+npm run dev
+```
+
 The product question:
 
 Can a spoiler-safe recap and relationship/status map help viewers return to a TV show after a long gap, without rewatching full seasons or accidentally seeing spoilers from later episodes?
