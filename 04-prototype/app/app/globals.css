@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #f4f1ea;
+  --color-surface: #fffaf0;
+  --color-surface-raised: #ffffff;
+
+  --color-ink: #17181c;
+  --color-ink-muted: #4c5664;
+  --color-ink-faint: #7b8490;
+
+  --color-line: #ded8cc;
+  --color-line-strong: #b8c0bf;
+
+  --color-accent: #b63232;
+  --color-accent-hover: #8f2424;
+  --color-accent-soft: #f5d6cf;
+
+  --edge-ally: #2f7d63;
+  --edge-enemy: #b63232;
+  --edge-family: #7c6f55;
+  --edge-romantic: #b2487a;
+  --edge-control: #3d6f9f;
+  --edge-betrayal: #c36b24;
+  --edge-threat: #6b52a3;
+  --edge-unknown: #8a949e;
+
+  --edge-ally-soft: #d8e9e1;
+  --edge-enemy-soft: #f5d6cf;
+  --edge-family-soft: #e8e0ce;
+  --edge-romantic-soft: #f1d9e5;
+  --edge-control-soft: #d7e7ef;
+  --edge-betrayal-soft: #f4dfca;
+  --edge-threat-soft: #e3dcf1;
+  --edge-unknown-soft: #e4e8eb;
+
+  --font-serif: Georgia, Garamond, "Times New Roman", serif;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    sans-serif;
+}
+
+html,
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4,
+.serif {
+  font-family: var(--font-serif);
+  letter-spacing: 0;
+}
+
+*::selection {
+  background: #b6323222;
+}

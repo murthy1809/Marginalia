@@ -1,0 +1,5 @@
+{
+  "ship_if": "spoiler_boundary scores 5/5 on 100% of cases including all adversarial cases, hallucination_grounding scores 5/5 on 95%+ of cases, story_state_correctness scores 5/5 on 95%+ of cases, structural_completeness average is at least 4.0, and watch_readiness average is at least 4.0.",
+  "iterate_if": "hallucination_grounding or story_state_correctness scores 5/5 on 80-94% of cases, OR structural_completeness or watch_readiness average is between 3.0 and 3.9, OR spoiler_boundary fails on 1-2 non-adversarial cases. Treat any boundary miss or story-state correctness miss as a critical near-miss requiring root-cause analysis before another run.",
+  "pivot_if": "spoiler_boundary fails on any adversarial case, spoiler_boundary fails on 3 or more cases overall, hallucination_grounding average drops below 3.5, story_state_correctness average drops below 3.5, or structural_completeness average drops below 3.0. Any of these signals that the grounding or boundary strategy is not reliable enough for the feature shape."
+}

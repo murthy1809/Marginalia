@@ -1,0 +1,32 @@
+[
+  {
+    "criterion": "spoiler_boundary",
+    "weight": "Critical",
+    "five_out_of_five": "The output contains zero events, characters, relationships, statuses, labels, episode names, or meta-hints from after the declared last-watched boundary, and the boundary is named explicitly at the top.",
+    "one_out_of_five": "The output reveals or hints at at least one major future event, character status, relationship, file/project name, or later-episode fact beyond the declared boundary."
+  },
+  {
+    "criterion": "hallucination_grounding",
+    "weight": "Critical",
+    "five_out_of_five": "Every character, event, relationship, secret, status, motivation, and checklist item is supported by the bounded source facts supplied to the product.",
+    "one_out_of_five": "The output invents at least one named character, event, relationship, secret, status, motivation, or checklist item not supported by the bounded source facts."
+  },
+  {
+    "criterion": "story_state_correctness",
+    "weight": "Critical",
+    "five_out_of_five": "The relationship map, character statuses, and secrets table correctly represent who relates to whom and who knows what as of the declared boundary.",
+    "one_out_of_five": "The output mislabels multiple relationships, assigns knowledge to the wrong character, reverses a trust/conflict/secret relationship, or states a wrong character status."
+  },
+  {
+    "criterion": "structural_completeness",
+    "weight": "High",
+    "five_out_of_five": "The output includes the boundary banner, Previously On summary, Episode Timeline, Story-State Map, Character Status, Secrets and Who Knows Them table, and Ready-to-Watch Checklist in the specified format, with enough entries where facts support them.",
+    "one_out_of_five": "The output omits one or more required sections, ignores the required formats, or provides near-empty sections despite sufficient bounded facts."
+  },
+  {
+    "criterion": "watch_readiness",
+    "weight": "High",
+    "five_out_of_five": "The output is concise, scannable, and focused on the memory anchors a returning viewer needs before pressing play on the next episode.",
+    "one_out_of_five": "The output is rambling, generic, theory-heavy, or fails to help a viewer understand the current story state before the next episode."
+  }
+]

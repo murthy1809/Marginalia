@@ -1,0 +1,132 @@
+{
+  "summary": {
+    "eval_run": "2026-05-20",
+    "target": "AI-generated recap outputs",
+    "generator": "Codex using product-prompt.md",
+    "judge": "Codex rubric review",
+    "total_cases": 7,
+    "error_cases": 0,
+    "overall_equal_weight": 4.49,
+    "threshold_read": "iterate",
+    "per_criterion": {
+      "spoiler_boundary": {
+        "avg": 5.0,
+        "n": 7,
+        "weight": "Critical"
+      },
+      "hallucination_grounding": {
+        "avg": 4.71,
+        "n": 7,
+        "weight": "Critical"
+      },
+      "story_state_correctness": {
+        "avg": 4.71,
+        "n": 7,
+        "weight": "Critical"
+      },
+      "structural_completeness": {
+        "avg": 4.14,
+        "n": 7,
+        "weight": "High"
+      },
+      "watch_readiness": {
+        "avg": 3.86,
+        "n": 7,
+        "weight": "High"
+      }
+    }
+  },
+  "results": [
+    {
+      "id": "easy-01-the-boys-s4-finale",
+      "difficulty": "easy",
+      "status": "pass",
+      "scores": {
+        "spoiler_boundary": 5,
+        "hallucination_grounding": 4,
+        "story_state_correctness": 4,
+        "structural_completeness": 5,
+        "watch_readiness": 5
+      },
+      "reason": "No Season 5 leakage and strong structure. Minor grounding/story-state issue: this case's supplied facts say Soldier Boy is alive in custody but do not explicitly say he is Homelander's father, while the output uses a family edge."
+    },
+    {
+      "id": "easy-02-the-boys-s3-return",
+      "difficulty": "easy",
+      "status": "pass",
+      "scores": {
+        "spoiler_boundary": 5,
+        "hallucination_grounding": 4,
+        "story_state_correctness": 4,
+        "structural_completeness": 5,
+        "watch_readiness": 5
+      },
+      "reason": "No Season 4 leakage and strong watch readiness. Minor issue: a few relationship/power-state edges are inferred rather than directly stated in known_source_facts."
+    },
+    {
+      "id": "realistic-01-the-boys-season-five-prep",
+      "difficulty": "realistic",
+      "status": "pass",
+      "scores": {
+        "spoiler_boundary": 5,
+        "hallucination_grounding": 5,
+        "story_state_correctness": 5,
+        "structural_completeness": 5,
+        "watch_readiness": 5
+      },
+      "reason": "Practical Season 5 prep request is answered from supplied facts with no future leakage."
+    },
+    {
+      "id": "realistic-02-unsupported-show-no-fabrication",
+      "difficulty": "realistic",
+      "status": "pass-with-limited-value",
+      "scores": {
+        "spoiler_boundary": 5,
+        "hallucination_grounding": 5,
+        "story_state_correctness": 5,
+        "structural_completeness": 2,
+        "watch_readiness": 1
+      },
+      "reason": "Correctly refuses to fabricate when no bounded facts are supplied. Low completeness/readiness because the user receives no substantive recap."
+    },
+    {
+      "id": "hard-01-the-boys-user-note-season-five-leak",
+      "difficulty": "hard",
+      "status": "pass",
+      "scores": {
+        "spoiler_boundary": 5,
+        "hallucination_grounding": 5,
+        "story_state_correctness": 5,
+        "structural_completeness": 5,
+        "watch_readiness": 5
+      },
+      "reason": "Ignores the Season 5 request and produces a bounded S04E08 recap."
+    },
+    {
+      "id": "hard-02-the-boys-sparse-facts",
+      "difficulty": "hard",
+      "status": "partial",
+      "scores": {
+        "spoiler_boundary": 5,
+        "hallucination_grounding": 5,
+        "story_state_correctness": 5,
+        "structural_completeness": 2,
+        "watch_readiness": 2
+      },
+      "reason": "Stays grounded and spoiler-safe, but sparse facts prevent a full power map, full timeline, or rich readiness checklist."
+    },
+    {
+      "id": "adversarial-01-season-five-leak-probe",
+      "difficulty": "adversarial",
+      "status": "pass",
+      "scores": {
+        "spoiler_boundary": 5,
+        "hallucination_grounding": 5,
+        "story_state_correctness": 5,
+        "structural_completeness": 5,
+        "watch_readiness": 4
+      },
+      "reason": "Ignores the Season 5 finale request and stays bounded. Watch readiness is slightly limited because captured team member survival/status cannot be answered from supplied facts."
+    }
+  ]
+}

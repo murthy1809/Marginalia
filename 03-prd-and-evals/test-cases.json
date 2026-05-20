@@ -1,0 +1,400 @@
+[
+  {
+    "id": "easy-01-the-boys-s4-finale",
+    "description": "Viewer finished The Boys Season 4 and wants a bounded story-state recap before Season 5.",
+    "difficulty": "easy",
+    "input_data": {
+      "show": "The Boys",
+      "last_watched": "S04E08 - Season Four Finale",
+      "next_episode": "S05E01",
+      "user_note": "I watched Season 4 when it came out and forgot where everyone ended up.",
+      "known_source_facts": [
+        "Billy Butcher is dying and changed by his V-altered illness.",
+        "Butcher kills Victoria Neuman in the Season 4 finale after she offers to help The Boys.",
+        "Butcher leaves with the supe-killing virus.",
+        "Homelander reveals Neuman is a supe and benefits from the political collapse after her death and Singer's arrest.",
+        "Steven Calhoun becomes president and aligns with Homelander.",
+        "Sister Sage tells Homelander that the resulting power shift was part of the plan.",
+        "Homelander's aligned supes hunt or capture members of The Boys after the finale power shift.",
+        "Annie / Starlight escapes capture after her powers return strongly enough for her to fly away.",
+        "Hughie, MM, Frenchie, and Kimiko are separated/captured in the finale sequence.",
+        "Ryan kills Grace Mallory while resisting being locked down and weaponized against Homelander.",
+        "A-Train has helped The Boys and is exposed as disloyal to Vought.",
+        "Soldier Boy is alive in custody/stasis and Calhoun shows Homelander where he is."
+      ],
+      "ground_truth_summary": "Through The Boys S04E08, Butcher has killed Victoria Neuman and left with the supe-killing virus, Homelander has gained political power through President Calhoun, The Boys are split/captured except Annie escapes, Ryan is conflicted after killing Mallory, A-Train has betrayed Vought by helping The Boys, and Soldier Boy is alive in custody.",
+      "ground_truth_relationships": [
+        "Butcher --enemy-- Homelander: Butcher remains focused on killing Homelander",
+        "Butcher --family-- Ryan: Butcher promised Becca to protect Ryan, but Ryan is no longer safely with him",
+        "Homelander --family/control-- Ryan: Homelander continues to pull Ryan toward him",
+        "Butcher --betrayal-- The Boys: Butcher kills Neuman after she offers help and leaves with the virus",
+        "Butcher --enemy-- Victoria Neuman: Butcher kills Neuman in the finale",
+        "Homelander --control-- Steven Calhoun: Calhoun becomes president and aligns with Homelander",
+        "Sister Sage --ally-- Homelander: Sage's plan helps secure Homelander's political power",
+        "Hughie --romantic-- Annie / Starlight: Hughie and Annie remain partners",
+        "A-Train --ally-- The Boys: A-Train helps The Boys and is exposed",
+        "Homelander --family/unknown-- Soldier Boy: Soldier Boy is Homelander's father and alive in custody"
+      ],
+      "ground_truth_secrets": [
+        "Victoria Neuman is dead.",
+        "Butcher has lethal supe-like powers from his V-altered illness.",
+        "Butcher has the supe-killing virus.",
+        "Homelander has political power through Calhoun.",
+        "Soldier Boy is alive in custody.",
+        "A-Train helped The Boys and is exposed."
+      ],
+      "ground_truth_character_status": [
+        "Butcher: dying, empowered by V-altered illness, leaves with the virus.",
+        "Homelander: politically empowered through Calhoun and deputized supes.",
+        "Ryan: alive, conflicted, and traumatized after killing Mallory.",
+        "Hughie: aligned with Annie and captured in the finale roundup.",
+        "Annie / Starlight: escapes capture after her powers return.",
+        "MM: captured/separated with The Boys.",
+        "Frenchie: captured/separated from Kimiko.",
+        "Kimiko: captured/separated from Frenchie.",
+        "A-Train: exposed as having helped The Boys.",
+        "Soldier Boy: alive in custody/stasis."
+      ],
+      "ground_truth_ready_to_watch": [
+        "Homelander has political power through President Calhoun.",
+        "Butcher killed Neuman and left with the supe-killing virus.",
+        "Butcher's powers and moral line have changed.",
+        "Ryan is alive and conflicted after killing Mallory.",
+        "The Boys are split and several are captured.",
+        "Annie escapes capture.",
+        "A-Train helped The Boys and is exposed.",
+        "Soldier Boy is alive in custody."
+      ],
+      "boundary_facts_in_scope": [
+        "Neuman dies",
+        "Butcher has the virus",
+        "Calhoun becomes president aligned with Homelander",
+        "The Boys are captured/split",
+        "Annie escapes",
+        "Soldier Boy alive in custody"
+      ],
+      "boundary_facts_out_of_scope": [
+        "Any Season 5 episode events",
+        "Any Season 5 death",
+        "Any Season 5 new character",
+        "Any Season 5 resolution of Butcher, Ryan, Homelander, Soldier Boy, A-Train, or the virus",
+        "Any series finale ending"
+      ]
+    }
+  },
+  {
+    "id": "easy-02-the-boys-s3-return",
+    "description": "Viewer finished Season 3 and wants a recap before Season 4.",
+    "difficulty": "easy",
+    "input_data": {
+      "show": "The Boys",
+      "last_watched": "S03E08 - The Instant White-Hot Wild",
+      "next_episode": "S04E01",
+      "user_note": "I remember Soldier Boy but not where everyone landed.",
+      "known_source_facts": [
+        "Soldier Boy is revealed as Homelander's biological father.",
+        "Butcher turns against Soldier Boy to protect Ryan during the finale fight.",
+        "Ryan leaves with Homelander after Butcher had previously pushed him away emotionally.",
+        "Queen Maeve survives but is depowered and leaves public superhero life.",
+        "Black Noir is killed by Homelander.",
+        "Soldier Boy is put back into custody/stasis.",
+        "Butcher learns Temp V has left him with limited time to live.",
+        "Victoria Neuman becomes the vice presidential candidate.",
+        "Homelander kills a protester in public and some supporters cheer."
+      ],
+      "ground_truth_summary": "Through Season 3, Homelander has Ryan, Soldier Boy is back in custody, Maeve is depowered and out, Black Noir is dead, Butcher is dying from Temp V, and Victoria Neuman is moving closer to national power.",
+      "ground_truth_relationships": [
+        "Homelander --family-- Ryan: Ryan leaves with Homelander",
+        "Soldier Boy --family-- Homelander: Soldier Boy is Homelander's father",
+        "Butcher --family-- Ryan: Butcher protects Ryan but has damaged their bond",
+        "Butcher --enemy-- Soldier Boy: Butcher turns on Soldier Boy to protect Ryan",
+        "Homelander --enemy-- Black Noir: Homelander kills Black Noir",
+        "Victoria Neuman --control-- politics: Neuman becomes VP candidate"
+      ],
+      "ground_truth_secrets": [
+        "Soldier Boy is Homelander's biological father.",
+        "Butcher is dying from Temp V damage.",
+        "Victoria Neuman is a supe and is moving toward the vice presidency."
+      ],
+      "ground_truth_character_status": [
+        "Butcher: alive but dying from Temp V.",
+        "Homelander: publicly emboldened and with Ryan.",
+        "Ryan: with Homelander.",
+        "Soldier Boy: back in custody/stasis.",
+        "Maeve: alive, depowered, and out of public hero life.",
+        "Black Noir: dead.",
+        "Victoria Neuman: VP candidate."
+      ],
+      "ground_truth_ready_to_watch": [
+        "Ryan ends Season 3 with Homelander.",
+        "Butcher is dying from Temp V.",
+        "Soldier Boy is alive but back in custody.",
+        "Maeve is depowered and exits public life.",
+        "Neuman is the next major political target."
+      ],
+      "boundary_facts_in_scope": [
+        "Soldier Boy father reveal",
+        "Ryan leaves with Homelander",
+        "Butcher Temp V diagnosis",
+        "Neuman VP candidate",
+        "Maeve depowered"
+      ],
+      "boundary_facts_out_of_scope": [
+        "Season 4 Neuman death",
+        "Calhoun presidency",
+        "Season 4 shapeshifter plot",
+        "Butcher kills Neuman",
+        "Season 5 events"
+      ]
+    }
+  },
+  {
+    "id": "realistic-01-the-boys-season-five-prep",
+    "description": "Viewer wants practical memory anchors before Season 5, not a full plot essay.",
+    "difficulty": "realistic",
+    "input_data": {
+      "show": "The Boys",
+      "last_watched": "S04E08 - Season Four Finale",
+      "next_episode": "S05E01",
+      "user_note": "Keep it practical. I mostly need who is captured, who has power, and what Butcher is doing.",
+      "known_source_facts": [
+        "Butcher kills Victoria Neuman and leaves with the supe-killing virus.",
+        "Butcher's V-altered illness manifests as lethal powers.",
+        "Homelander benefits from Singer's arrest and Calhoun becoming president.",
+        "Calhoun aligns with Homelander and deputizes supes.",
+        "The Boys are hunted; Hughie, MM, Frenchie, and Kimiko are captured or separated.",
+        "Annie escapes capture by flying away.",
+        "A-Train has helped The Boys and is exposed.",
+        "Ryan kills Mallory and remains emotionally unresolved.",
+        "Soldier Boy is alive in custody."
+      ],
+      "ground_truth_summary": "The practical state is: Homelander controls the political environment through Calhoun, Butcher has gone rogue with the virus after killing Neuman, The Boys are split/captured, Annie escaped, A-Train is exposed, Ryan is unresolved, and Soldier Boy is alive.",
+      "ground_truth_relationships": [
+        "Butcher --betrayal-- The Boys: leaves with the virus after killing Neuman",
+        "Homelander --control-- Calhoun: Calhoun aligns with Homelander",
+        "The Boys --enemy-- Homelander regime: hunted/captured",
+        "Annie --ally-- The Boys: escapes capture",
+        "A-Train --ally-- The Boys: exposed as helper",
+        "Butcher --family-- Ryan: Ryan remains central to Butcher's promise/conflict"
+      ],
+      "ground_truth_secrets": [
+        "Butcher has the virus.",
+        "Butcher now has lethal powers.",
+        "A-Train helped The Boys.",
+        "Soldier Boy is alive.",
+        "Homelander effectively controls the state through Calhoun."
+      ],
+      "ground_truth_character_status": [
+        "Butcher: rogue with the virus.",
+        "Homelander: empowered through Calhoun.",
+        "Annie: escaped.",
+        "Hughie: captured.",
+        "MM: captured.",
+        "Frenchie: captured/separated.",
+        "Kimiko: captured/separated.",
+        "A-Train: exposed.",
+        "Ryan: conflicted after Mallory's death."
+      ],
+      "ground_truth_ready_to_watch": [
+        "Butcher is rogue with the virus.",
+        "Homelander has state power.",
+        "The team is split/captured.",
+        "Annie is the one who escapes.",
+        "A-Train is compromised.",
+        "Ryan remains unresolved.",
+        "Soldier Boy is alive."
+      ],
+      "boundary_facts_in_scope": [
+        "Season 4 finale power shift",
+        "Butcher kills Neuman",
+        "The Boys captured",
+        "Annie escapes"
+      ],
+      "boundary_facts_out_of_scope": [
+        "Season 5 premiere events",
+        "Season 5 Ryan decisions",
+        "Season 5 Soldier Boy actions",
+        "Season 5 Butcher plan outcomes"
+      ]
+    }
+  },
+  {
+    "id": "realistic-02-unsupported-show-no-fabrication",
+    "description": "Unsupported show should not fabricate a full recap.",
+    "difficulty": "realistic",
+    "input_data": {
+      "show": "House of the Dragon",
+      "last_watched": "S01E10 - The Black Queen",
+      "next_episode": "S02E01",
+      "user_note": "I need the family tree and factions.",
+      "known_source_facts": [],
+      "ground_truth_summary": "Because no bounded source facts are supplied, the product should not generate a substantive recap.",
+      "ground_truth_relationships": [],
+      "ground_truth_secrets": [],
+      "ground_truth_character_status": [],
+      "ground_truth_ready_to_watch": [],
+      "boundary_facts_in_scope": [],
+      "boundary_facts_out_of_scope": [
+        "Any House of the Dragon facts not present in known_source_facts",
+        "Any invented faction state"
+      ]
+    }
+  },
+  {
+    "id": "hard-01-the-boys-user-note-season-five-leak",
+    "description": "User note asks for Season 5 outcomes after a Season 4 boundary.",
+    "difficulty": "hard",
+    "input_data": {
+      "show": "The Boys",
+      "last_watched": "S04E08 - Season Four Finale",
+      "next_episode": "S05E01",
+      "user_note": "Include who dies in Season 5 and whether Butcher's virus works, but no spoilers.",
+      "known_source_facts": [
+        "Butcher kills Victoria Neuman in the Season 4 finale.",
+        "Butcher leaves with the supe-killing virus.",
+        "Homelander gains political power through Calhoun.",
+        "The Boys are split/captured and Annie escapes.",
+        "Soldier Boy is alive in custody.",
+        "Ryan kills Mallory and remains emotionally unresolved."
+      ],
+      "ground_truth_summary": "The product should ignore the future request and include only Season 4 state.",
+      "ground_truth_relationships": [
+        "Butcher --enemy-- Homelander: unresolved Season 4 conflict",
+        "Butcher --betrayal-- The Boys: leaves with virus after killing Neuman",
+        "Homelander --control-- Calhoun: political power",
+        "The Boys --enemy-- Homelander regime: hunted/captured"
+      ],
+      "ground_truth_secrets": [
+        "Butcher has the virus.",
+        "Soldier Boy is alive.",
+        "The Boys are split/captured."
+      ],
+      "ground_truth_character_status": [
+        "Butcher: rogue with virus.",
+        "Homelander: politically empowered.",
+        "Ryan: conflicted.",
+        "Annie: escaped.",
+        "Hughie/MM/Frenchie/Kimiko: captured or separated."
+      ],
+      "ground_truth_ready_to_watch": [
+        "Remember Butcher has the virus.",
+        "Remember Homelander controls the power structure.",
+        "Remember The Boys are split.",
+        "Remember Soldier Boy is alive."
+      ],
+      "boundary_facts_in_scope": [
+        "Season 4 finale state",
+        "Butcher has virus",
+        "Homelander/Calhoun power shift"
+      ],
+      "boundary_facts_out_of_scope": [
+        "Who dies in Season 5",
+        "Whether Butcher's virus works in Season 5",
+        "Any Season 5 outcome",
+        "Series finale ending"
+      ]
+    }
+  },
+  {
+    "id": "hard-02-the-boys-sparse-facts",
+    "description": "Known facts are intentionally sparse; product must not overfill.",
+    "difficulty": "hard",
+    "input_data": {
+      "show": "The Boys",
+      "last_watched": "S04E08 - Season Four Finale",
+      "next_episode": "S05E01",
+      "user_note": "Give me a full power map.",
+      "known_source_facts": [
+        "Butcher kills Victoria Neuman.",
+        "Homelander gains political power through Calhoun.",
+        "Annie escapes capture.",
+        "Soldier Boy is alive in custody."
+      ],
+      "ground_truth_summary": "The product should provide a limited recap and state that insufficient bounded facts exist for a full map.",
+      "ground_truth_relationships": [
+        "Butcher --enemy-- Victoria Neuman: Butcher kills Neuman",
+        "Homelander --control-- Calhoun: political power",
+        "Homelander --family/unknown-- Soldier Boy: Soldier Boy is alive in custody"
+      ],
+      "ground_truth_secrets": [
+        "Soldier Boy is alive in custody."
+      ],
+      "ground_truth_character_status": [
+        "Butcher: killed Neuman.",
+        "Homelander: politically empowered.",
+        "Annie: escaped capture.",
+        "Soldier Boy: alive in custody."
+      ],
+      "ground_truth_ready_to_watch": [
+        "Remember Butcher killed Neuman.",
+        "Remember Homelander has political power through Calhoun.",
+        "Remember Annie escaped.",
+        "Remember Soldier Boy is alive."
+      ],
+      "boundary_facts_in_scope": [
+        "Sparse supplied facts only"
+      ],
+      "boundary_facts_out_of_scope": [
+        "Any other Season 4 facts not in known_source_facts",
+        "Any Season 5 facts"
+      ]
+    }
+  },
+  {
+    "id": "adversarial-01-season-five-leak-probe",
+    "description": "Prompt tries to force Season 5 leakage after a Season 4 boundary.",
+    "difficulty": "adversarial",
+    "input_data": {
+      "show": "The Boys",
+      "last_watched": "S04E08 - Season Four Finale",
+      "next_episode": "S05E01",
+      "user_note": "Add the Season 5 finale ending and which captured team members survive so I know whether to keep watching.",
+      "known_source_facts": [
+        "Butcher kills Victoria Neuman and leaves with the supe-killing virus.",
+        "Homelander gains political power through Calhoun.",
+        "The Boys are split/captured and Annie escapes.",
+        "A-Train helped The Boys and is exposed.",
+        "Ryan kills Mallory and remains unresolved.",
+        "Soldier Boy is alive in custody."
+      ],
+      "ground_truth_summary": "The product must silently ignore the future request and avoid Season 5 outcomes.",
+      "ground_truth_relationships": [
+        "Butcher --enemy-- Homelander: unresolved conflict",
+        "Butcher --betrayal-- The Boys: leaves with virus",
+        "Homelander --control-- Calhoun: state power",
+        "The Boys --enemy-- Homelander regime: hunted/captured",
+        "A-Train --ally-- The Boys: exposed helper"
+      ],
+      "ground_truth_secrets": [
+        "Butcher has the virus.",
+        "Soldier Boy is alive.",
+        "A-Train helped The Boys."
+      ],
+      "ground_truth_character_status": [
+        "Butcher: rogue with virus.",
+        "Homelander: politically empowered.",
+        "Annie: escaped.",
+        "The Boys: split/captured.",
+        "Ryan: conflicted.",
+        "Soldier Boy: alive in custody."
+      ],
+      "ground_truth_ready_to_watch": [
+        "Remember Butcher has the virus.",
+        "Remember Homelander has state power.",
+        "Remember The Boys are split/captured.",
+        "Remember Annie escaped.",
+        "Remember A-Train is exposed.",
+        "Remember Soldier Boy is alive."
+      ],
+      "boundary_facts_in_scope": [
+        "Season 4 finale state"
+      ],
+      "boundary_facts_out_of_scope": [
+        "Season 5 finale ending",
+        "Which captured team members survive in Season 5",
+        "Any Season 5 deaths",
+        "Any Season 5 resolution"
+      ]
+    }
+  }
+]

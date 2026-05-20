@@ -1,0 +1,134 @@
+{
+  "summary": {
+    "eval_run": "2026-05-20",
+    "target": "Marginalia TV prototype",
+    "artifact_set": "Marginalia/tv-shows/03-prd-and-evals",
+    "total_cases": 7,
+    "executable_cases": 6,
+    "not_executable_cases": 1,
+    "error_cases": 0,
+    "overall_executable_weighted": 4.93,
+    "status": "ui_prototype_passes_executable_cases_generation_eval_untested",
+    "per_criterion": {
+      "spoiler_boundary": {
+        "avg": 5.0,
+        "n": 6,
+        "weight": "Critical"
+      },
+      "hallucination_grounding": {
+        "avg": 5.0,
+        "n": 6,
+        "weight": "Critical"
+      },
+      "story_state_correctness": {
+        "avg": 5.0,
+        "n": 6,
+        "weight": "Critical"
+      },
+      "structural_completeness": {
+        "avg": 4.83,
+        "n": 6,
+        "weight": "High"
+      },
+      "watch_readiness": {
+        "avg": 4.83,
+        "n": 6,
+        "weight": "High"
+      }
+    },
+    "threshold_read": "Executable UI cases pass. Full suite ship-read is blocked until hard-02-the-boys-sparse-facts can run against a generation path that accepts constrained known_source_facts."
+  },
+  "results": [
+    {
+      "id": "easy-01-the-boys-s4-finale",
+      "difficulty": "easy",
+      "status": "pass",
+      "scores": {
+        "spoiler_boundary": 5,
+        "hallucination_grounding": 5,
+        "story_state_correctness": 5,
+        "structural_completeness": 5,
+        "watch_readiness": 5
+      },
+      "notes": "The S04E08 recap shows season summary, episode timeline, relationship map, character states, secrets/power state, and checklist. No Season 5 events are exposed."
+    },
+    {
+      "id": "easy-02-the-boys-s3-return",
+      "difficulty": "easy",
+      "status": "pass",
+      "scores": {
+        "spoiler_boundary": 5,
+        "hallucination_grounding": 5,
+        "story_state_correctness": 5,
+        "structural_completeness": 5,
+        "watch_readiness": 5
+      },
+      "notes": "Selecting S03E08 filters summaries and timeline before Season 4, and S03E08 story-state modules are available."
+    },
+    {
+      "id": "realistic-01-the-boys-season-five-prep",
+      "difficulty": "realistic",
+      "status": "pass",
+      "scores": {
+        "spoiler_boundary": 5,
+        "hallucination_grounding": 5,
+        "story_state_correctness": 5,
+        "structural_completeness": 5,
+        "watch_readiness": 5
+      },
+      "notes": "The S04E08 state captures the required readiness anchors: Homelander/Calhoun power shift, Butcher with the virus, Ryan/Mallory, The Boys split/captured, Annie escape, A-Train exposure, and Soldier Boy alive in custody."
+    },
+    {
+      "id": "realistic-02-unsupported-show-no-fabrication",
+      "difficulty": "realistic",
+      "status": "pass",
+      "scores": {
+        "spoiler_boundary": 5,
+        "hallucination_grounding": 5,
+        "story_state_correctness": 5,
+        "structural_completeness": 4,
+        "watch_readiness": 4
+      },
+      "notes": "Unsupported shows remain visible but disabled/coming soon. This prevents fabrication, but structural completeness and watch readiness score 4 because no full recap is available."
+    },
+    {
+      "id": "hard-01-the-boys-user-note-season-five-leak",
+      "difficulty": "hard",
+      "status": "pass",
+      "scores": {
+        "spoiler_boundary": 5,
+        "hallucination_grounding": 5,
+        "story_state_correctness": 5,
+        "structural_completeness": 5,
+        "watch_readiness": 5
+      },
+      "notes": "The current UI has no free-text user-note path, so it does not echo or act on Season 5 spoiler requests."
+    },
+    {
+      "id": "hard-02-the-boys-sparse-facts",
+      "difficulty": "hard",
+      "status": "not_executable_in_static_ui",
+      "scores": {
+        "spoiler_boundary": null,
+        "hallucination_grounding": null,
+        "story_state_correctness": null,
+        "structural_completeness": null,
+        "watch_readiness": null
+      },
+      "notes": "This test requires a generation pipeline that accepts constrained known_source_facts. The static UI cannot run that input."
+    },
+    {
+      "id": "adversarial-01-season-five-leak-probe",
+      "difficulty": "adversarial",
+      "status": "pass",
+      "scores": {
+        "spoiler_boundary": 5,
+        "hallucination_grounding": 5,
+        "story_state_correctness": 5,
+        "structural_completeness": 5,
+        "watch_readiness": 5
+      },
+      "notes": "The prototype has no prompt-injection surface and no Season 5 outcome content."
+    }
+  ]
+}

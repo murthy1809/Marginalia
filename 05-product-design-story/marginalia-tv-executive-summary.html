@@ -1,0 +1,800 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Marginalia TV - Executive Summary</title>
+  <style>
+    :root {
+      --bg: #0b0d10;
+      --surface: #141820;
+      --surface-2: #1d2430;
+      --surface-3: #252e3c;
+      --ink: #f4f7fb;
+      --muted: #a8b3c4;
+      --faint: #738094;
+      --line: #303a49;
+      --accent: #4dd4ac;
+      --accent-2: #ffb454;
+      --danger: #ff6b6b;
+      --blue: #7aa7ff;
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top left, rgba(77, 212, 172, 0.12), transparent 32rem),
+        linear-gradient(180deg, #0b0d10 0%, #10141b 46%, #0b0d10 100%);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.5;
+    }
+
+    a { color: inherit; }
+
+    .wrap {
+      width: min(var(--max), calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(11, 13, 16, 0.88);
+      backdrop-filter: blur(18px);
+    }
+
+    .nav {
+      min-height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .mark {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border-radius: 8px;
+      color: #07100c;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      font-weight: 900;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .date {
+      color: var(--faint);
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    .hero {
+      padding: 72px 0 44px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 42px;
+      align-items: end;
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+
+    h1 {
+      margin-bottom: 22px;
+      font-size: clamp(44px, 6vw, 78px);
+      line-height: 0.95;
+      letter-spacing: -0.055em;
+    }
+
+    h2 {
+      margin-bottom: 18px;
+      font-size: clamp(28px, 3.2vw, 44px);
+      line-height: 1.02;
+      letter-spacing: -0.04em;
+    }
+
+    h3 {
+      margin-bottom: 10px;
+      font-size: 18px;
+      letter-spacing: -0.02em;
+    }
+
+    .lead {
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 20px;
+      line-height: 1.55;
+    }
+
+    .hero-card,
+    .card {
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      border-radius: 18px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.025));
+      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.25);
+    }
+
+    .hero-card {
+      padding: 26px;
+    }
+
+    .section {
+      padding: 38px 0;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 28px;
+      align-items: end;
+      margin-bottom: 20px;
+    }
+
+    .section-head p {
+      max-width: 560px;
+      margin-bottom: 0;
+      color: var(--muted);
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .card {
+      padding: 22px;
+    }
+
+    .card-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .card-title h3 {
+      margin-bottom: 0;
+    }
+
+    .logo {
+      width: 38px;
+      height: 38px;
+      flex: 0 0 auto;
+      display: grid;
+      place-items: center;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      font-weight: 900;
+      letter-spacing: -0.04em;
+    }
+
+    .logo-youtube {
+      background: #ff0033;
+      border-color: #ff0033;
+      position: relative;
+    }
+
+    .logo-youtube:before {
+      content: "";
+      width: 0;
+      height: 0;
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+      border-left: 13px solid white;
+      margin-left: 3px;
+    }
+
+    .logo-amazon {
+      background: #111827;
+      color: white;
+      border-color: rgba(255, 255, 255, 0.14);
+      font-size: 18px;
+      position: relative;
+    }
+
+    .logo-amazon:after {
+      content: "";
+      position: absolute;
+      left: 10px;
+      right: 8px;
+      bottom: 8px;
+      height: 6px;
+      border-bottom: 2px solid #ff9900;
+      border-radius: 0 0 50% 50%;
+      transform: rotate(-8deg);
+    }
+
+    .logo-wiki {
+      background: #f8f9fa;
+      color: #202122;
+      border-color: #c8ccd1;
+      font-family: Georgia, serif;
+      font-size: 24px;
+    }
+
+    .metric {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .metric strong {
+      font-size: 40px;
+      line-height: 1;
+      letter-spacing: -0.04em;
+    }
+
+    .metric span {
+      color: var(--faint);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .muted { color: var(--muted); }
+    .faint { color: var(--faint); }
+    .accent { color: var(--accent); }
+    .warning { color: var(--accent-2); }
+    .danger { color: var(--danger); }
+    .blue { color: var(--blue); }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 999px;
+      padding: 7px 11px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .bar {
+      height: 9px;
+      overflow: hidden;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .fill {
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    }
+
+    .case-row {
+      display: grid;
+      grid-template-columns: 0.55fr 1.4fr 1fr;
+      gap: 18px;
+      padding: 18px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .case-row:first-child { border-top: 0; }
+
+    .flow {
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      border-radius: 18px;
+      background: #10151d;
+      padding: 12px;
+      overflow: auto;
+    }
+
+    svg text {
+      font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+      fill: var(--ink);
+    }
+
+    .quote {
+      position: relative;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .quote:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 4px;
+      bottom: 4px;
+      width: 3px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, var(--accent), var(--accent-2));
+    }
+
+    .reddit-badge {
+      width: 20px;
+      height: 20px;
+      display: inline-grid;
+      place-items: center;
+      margin-right: 7px;
+      border-radius: 50%;
+      background: #ff4500;
+      color: white;
+      line-height: 1;
+      vertical-align: -4px;
+    }
+
+    .reddit-badge svg {
+      width: 16px;
+      height: 16px;
+      display: block;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    th, td {
+      padding: 14px;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 14px;
+    }
+
+    th {
+      color: var(--faint);
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    tr:last-child td { border-bottom: 0; }
+
+    .rec {
+      border-left: 5px solid var(--accent);
+      background:
+        linear-gradient(90deg, rgba(77, 212, 172, 0.12), transparent 38%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.025));
+    }
+
+    .sources {
+      padding: 34px 0 48px;
+      color: var(--faint);
+      font-size: 12px;
+    }
+
+    .sources a {
+      color: var(--muted);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+    @media (max-width: 860px) {
+      .wrap { width: min(100% - 28px, var(--max)); }
+      .hero-grid, .grid-2, .grid-3 { grid-template-columns: 1fr; }
+      .section-head { display: block; }
+      .case-row { grid-template-columns: 1fr; }
+      .date { display: none; }
+      .hero { padding-top: 48px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <div class="brand">
+        <div class="mark">M</div>
+        <div>
+          <div>Marginalia TV</div>
+          <div class="faint" style="font-size:12px;">Investor / executive summary</div>
+        </div>
+      </div>
+      <div class="date">Generated May 20, 2026</div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Pitch thesis</div>
+          <h1>Serialized TV has a memory problem. Recaps only solve half of it.</h1>
+          <p class="lead">
+            Marginalia TV is a spoiler-safe story-state recap: viewers choose the last episode they watched and get the relationships, secrets, power shifts, character status, and ready-to-watch anchors they need before pressing play.
+          </p>
+        </div>
+        <aside class="hero-card">
+          <div class="pill">Core wedge</div>
+          <h2 style="font-size:34px;margin-top:18px;">Know exactly what you are allowed to know before the next episode.</h2>
+          <p class="muted">
+            The market already has AI summaries. The open space is precise spoiler trust plus story-state restoration.
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Executive summary</div>
+            <h2>The product bet</h2>
+          </div>
+          <p>
+            Returning viewers do not just ask, "What happened?" They ask, "Where does everyone stand right now, and what can I safely remember?"
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card">
+            <div class="metric"><strong>01</strong><span>Memory decay</span></div>
+            <p class="muted">
+              Long streaming gaps make viewers forget the story state: relationships, motivations, secrets, alliances, and unresolved threads.
+            </p>
+          </div>
+          <div class="card">
+            <div class="metric"><strong>02</strong><span>Spoiler risk</span></div>
+            <p class="muted">
+              Search, wikis, YouTube thumbnails, Reddit threads, podcast chatter, and streaming UI metadata can reveal future facts before the viewer presses play.
+            </p>
+          </div>
+          <div class="card">
+            <div class="metric"><strong>03</strong><span>Linear recaps</span></div>
+            <p class="muted">
+              Traditional recaps explain what happened, but they rarely rebuild the viewer's mental model of who knows what and where each character stands now.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Market snapshot</div>
+            <h2>Current solutions validate demand, but they leak trust.</h2>
+          </div>
+          <p>
+            The market is crowded at the summary layer. The unsolved job is a trusted, episode-bounded mental model.
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <div class="card">
+            <div class="card-title">
+              <div class="logo logo-wiki" aria-label="Wiki logo">W</div>
+              <h3>Fandom / Wikipedia / IMDb</h3>
+            </div>
+            <p class="muted">Deep information, but search snippets, sidebars, infoboxes, actor pages, and future links can reveal later events.</p>
+            <p class="quote"><span class="reddit-badge" aria-label="Reddit source"><svg viewBox="0 0 64 64" role="img" aria-hidden="true"><path fill="#fff" d="M54 31.1c0-3.4-2.8-6.2-6.2-6.2-1.7 0-3.2.7-4.3 1.8-3-2.1-7.1-3.4-11.6-3.6l2.1-9.8 6.8 1.4c.2 2.7 2.4 4.8 5.2 4.8 2.9 0 5.2-2.3 5.2-5.2s-2.3-5.2-5.2-5.2c-2 0-3.8 1.2-4.6 2.9l-8.1-1.7c-.9-.2-1.7.4-1.9 1.2l-2.5 11.6c-4.7.2-8.9 1.5-12 3.7-1.1-1.2-2.7-1.9-4.4-1.9-3.4 0-6.2 2.8-6.2 6.2 0 2.5 1.5 4.7 3.7 5.6-.1.6-.2 1.2-.2 1.8 0 8.5 9.9 15.4 22.1 15.4S54 47 54 38.5c0-.6-.1-1.2-.2-1.8 2.3-.9 3.8-3.1 3.8-5.6ZM19.8 36.5c0-2.1 1.7-3.8 3.8-3.8s3.8 1.7 3.8 3.8-1.7 3.8-3.8 3.8-3.8-1.7-3.8-3.8Zm21.4 10.1c-2.7 2.7-10.7 2.9-13.7 0-.6-.6-.6-1.5 0-2.1.6-.6 1.5-.6 2.1 0 1.7 1.6 7.6 1.6 9.4 0 .6-.6 1.5-.6 2.1 0 .7.6.7 1.5.1 2.1Zm-.7-6.3c-2.1 0-3.8-1.7-3.8-3.8s1.7-3.8 3.8-3.8 3.8 1.7 3.8 3.8-1.7 3.8-3.8 3.8Z"/></svg></span>"<a href="https://www.reddit.com/r/attackontitan/comments/gk3o1d">WHATEVER YOU DO, AVOID THE WIKI.</a>" <span class="faint">- Reddit fan warning</span></p>
+          </div>
+          <div class="card">
+            <div class="card-title">
+              <div class="logo logo-amazon" aria-label="Amazon logo">a</div>
+              <h3>Streamer recaps / X-Ray</h3>
+            </div>
+            <p class="muted">Native and convenient, but limited to platform catalogs and vulnerable to metadata leaks or weak personalization.</p>
+            <p class="quote"><span class="reddit-badge" aria-label="Reddit source"><svg viewBox="0 0 64 64" role="img" aria-hidden="true"><path fill="#fff" d="M54 31.1c0-3.4-2.8-6.2-6.2-6.2-1.7 0-3.2.7-4.3 1.8-3-2.1-7.1-3.4-11.6-3.6l2.1-9.8 6.8 1.4c.2 2.7 2.4 4.8 5.2 4.8 2.9 0 5.2-2.3 5.2-5.2s-2.3-5.2-5.2-5.2c-2 0-3.8 1.2-4.6 2.9l-8.1-1.7c-.9-.2-1.7.4-1.9 1.2l-2.5 11.6c-4.7.2-8.9 1.5-12 3.7-1.1-1.2-2.7-1.9-4.4-1.9-3.4 0-6.2 2.8-6.2 6.2 0 2.5 1.5 4.7 3.7 5.6-.1.6-.2 1.2-.2 1.8 0 8.5 9.9 15.4 22.1 15.4S54 47 54 38.5c0-.6-.1-1.2-.2-1.8 2.3-.9 3.8-3.1 3.8-5.6ZM19.8 36.5c0-2.1 1.7-3.8 3.8-3.8s3.8 1.7 3.8 3.8-1.7 3.8-3.8 3.8-3.8-1.7-3.8-3.8Zm21.4 10.1c-2.7 2.7-10.7 2.9-13.7 0-.6-.6-.6-1.5 0-2.1.6-.6 1.5-.6 2.1 0 1.7 1.6 7.6 1.6 9.4 0 .6-.6 1.5-.6 2.1 0 .7.6.7 1.5.1 2.1Zm-.7-6.3c-2.1 0-3.8-1.7-3.8-3.8s1.7-3.8 3.8-3.8 3.8 1.7 3.8 3.8-1.7 3.8-3.8 3.8Z"/></svg></span>"<a href="https://www.reddit.com/r/AmazonPrimeVideo/comments/1cm6kl1">X-Ray contains SPOILERS and it's horrible.</a>" <span class="faint">- Prime Video user critique</span></p>
+          </div>
+          <div class="card">
+            <h3>AI recap products</h3>
+            <p class="muted">Recap-TV, BrieflySeries, and SeriesSync show market pull, but most remain summary-led rather than relationship/state-led.</p>
+            <p class="quote"><span class="reddit-badge" aria-label="Reddit source"><svg viewBox="0 0 64 64" role="img" aria-hidden="true"><path fill="#fff" d="M54 31.1c0-3.4-2.8-6.2-6.2-6.2-1.7 0-3.2.7-4.3 1.8-3-2.1-7.1-3.4-11.6-3.6l2.1-9.8 6.8 1.4c.2 2.7 2.4 4.8 5.2 4.8 2.9 0 5.2-2.3 5.2-5.2s-2.3-5.2-5.2-5.2c-2 0-3.8 1.2-4.6 2.9l-8.1-1.7c-.9-.2-1.7.4-1.9 1.2l-2.5 11.6c-4.7.2-8.9 1.5-12 3.7-1.1-1.2-2.7-1.9-4.4-1.9-3.4 0-6.2 2.8-6.2 6.2 0 2.5 1.5 4.7 3.7 5.6-.1.6-.2 1.2-.2 1.8 0 8.5 9.9 15.4 22.1 15.4S54 47 54 38.5c0-.6-.1-1.2-.2-1.8 2.3-.9 3.8-3.1 3.8-5.6ZM19.8 36.5c0-2.1 1.7-3.8 3.8-3.8s3.8 1.7 3.8 3.8-1.7 3.8-3.8 3.8-3.8-1.7-3.8-3.8Zm21.4 10.1c-2.7 2.7-10.7 2.9-13.7 0-.6-.6-.6-1.5 0-2.1.6-.6 1.5-.6 2.1 0 1.7 1.6 7.6 1.6 9.4 0 .6-.6 1.5-.6 2.1 0 .7.6.7 1.5.1 2.1Zm-.7-6.3c-2.1 0-3.8-1.7-3.8-3.8s1.7-3.8 3.8-3.8 3.8 1.7 3.8 3.8-1.7 3.8-3.8 3.8Z"/></svg></span>"<a href="https://www.reddit.com/r/ChatGPT/comments/12bkihx">Tried a few times to have ChatGPT recap tv shows and it always gets it wrong.</a>" <span class="faint">- Reddit AI recap critique</span></p>
+          </div>
+          <div class="card">
+            <div class="card-title">
+              <div class="logo logo-youtube" aria-label="YouTube logo"></div>
+              <h3>YouTube recaps</h3>
+            </div>
+            <p class="muted">Fast and familiar. The problem is not whether viewers use YouTube; they do. The gap is that YouTube cannot enforce a viewer-specific spoiler boundary across titles, thumbnails, comments, recommendations, and creator assumptions.</p>
+            <p class="quote"><span class="reddit-badge" aria-label="Reddit source"><svg viewBox="0 0 64 64" role="img" aria-hidden="true"><path fill="#fff" d="M54 31.1c0-3.4-2.8-6.2-6.2-6.2-1.7 0-3.2.7-4.3 1.8-3-2.1-7.1-3.4-11.6-3.6l2.1-9.8 6.8 1.4c.2 2.7 2.4 4.8 5.2 4.8 2.9 0 5.2-2.3 5.2-5.2s-2.3-5.2-5.2-5.2c-2 0-3.8 1.2-4.6 2.9l-8.1-1.7c-.9-.2-1.7.4-1.9 1.2l-2.5 11.6c-4.7.2-8.9 1.5-12 3.7-1.1-1.2-2.7-1.9-4.4-1.9-3.4 0-6.2 2.8-6.2 6.2 0 2.5 1.5 4.7 3.7 5.6-.1.6-.2 1.2-.2 1.8 0 8.5 9.9 15.4 22.1 15.4S54 47 54 38.5c0-.6-.1-1.2-.2-1.8 2.3-.9 3.8-3.1 3.8-5.6ZM19.8 36.5c0-2.1 1.7-3.8 3.8-3.8s3.8 1.7 3.8 3.8-1.7 3.8-3.8 3.8-3.8-1.7-3.8-3.8Zm21.4 10.1c-2.7 2.7-10.7 2.9-13.7 0-.6-.6-.6-1.5 0-2.1.6-.6 1.5-.6 2.1 0 1.7 1.6 7.6 1.6 9.4 0 .6-.6 1.5-.6 2.1 0 .7.6.7 1.5.1 2.1Zm-.7-6.3c-2.1 0-3.8-1.7-3.8-3.8s1.7-3.8 3.8-3.8 3.8 1.7 3.8 3.8-1.7 3.8-3.8 3.8Z"/></svg></span>"<a href="https://www.reddit.com/r/NetflixBestOf/comments/104jrbw">Just watch recap on YT.</a>" <span class="faint">- Reddit viewer workaround</span></p>
+          </div>
+        </div>
+
+        <div style="margin-top:16px;" class="card">
+          <table>
+            <thead>
+              <tr>
+                <th>Market alternative</th>
+                <th>What it solves</th>
+                <th>Where it breaks</th>
+                <th>Marginalia opening</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Prime Video X-Ray / Video Recaps</td>
+                <td>Playback-context recaps inside Prime catalog</td>
+                <td>Catalog-limited; metadata can spoil; relationship/secret map unclear</td>
+                <td>Cross-platform, user-controlled boundary</td>
+              </tr>
+              <tr>
+                <td>Recap-TV / BrieflySeries / SeriesSync</td>
+                <td>AI-written episode or season summaries</td>
+                <td>Mostly prose-led; limited inspectable story-state depth</td>
+                <td>Structured state artifacts, not just text</td>
+              </tr>
+              <tr>
+                <td>YouTube creators</td>
+                <td>Quick, engaging catch-up</td>
+                <td>Weak spoiler control across thumbnails, comments, and recommendations</td>
+                <td>Trust and personalization over entertainment</td>
+              </tr>
+              <tr>
+                <td>Fan wikis</td>
+                <td>High-detail canon lookup</td>
+                <td>No viewer-specific boundary; high synthesis burden</td>
+                <td>Wiki-like depth without wiki-like spoiler risk</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Portfolio case study</div>
+            <h2>From crowded recap idea to sharper product wedge</h2>
+          </div>
+          <p>
+            The prototype narrowed "AI recap" into a defensible product bet: restore the viewer's story state at the exact boundary where they stopped.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="case-row">
+            <strong>Problem</strong>
+            <div>Viewers return after long gaps and remember the premise, but not the current state: who has power, who knows the secret, who betrayed whom, who is captured, and what unresolved thread matters next.</div>
+            <div class="muted">Current workarounds are fragmented: YouTube recaps, last-episode rewatches, full-season rewatches, wikis, Reddit, and streamer clips.</div>
+          </div>
+          <div class="case-row">
+            <strong>Insight</strong>
+            <div>The user job is not "summarize a show." It is "help me know exactly what I am allowed to know before the next episode."</div>
+            <div class="muted">This moves the product from plot recap to spoiler-safe story-state restoration.</div>
+          </div>
+          <div class="case-row">
+            <strong>MVP</strong>
+            <div>A seeded *The Boys* prototype for `S04E08 -> S05E01`: boundary selector, persistent spoiler banner, season recap, episode timeline, relationship map, character status, secrets/power table, checklist, and exit survey.</div>
+            <div class="muted">Unsupported shows stay visible but disabled. No weak placeholder recaps.</div>
+          </div>
+          <div class="case-row">
+            <strong>Tradeoff</strong>
+            <div>Manual boundary selection and structured artifacts were chosen before watch-history sync or video recap generation.</div>
+            <div class="muted">The goal was to prove comprehension and trust before adding integration or entertainment complexity.</div>
+          </div>
+          <div class="case-row">
+            <strong>Future strategy</strong>
+            <div>Turn open-source recap material into a structured, boundary-aware knowledge base with fact categories, source confidence, episode tags, and coverage gates before generation.</div>
+            <div class="muted">The moat is not "more AI recap." It is trusted data that can answer what this viewer can safely know right now.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Prototype walkthrough</div>
+            <h2>The designed journey</h2>
+          </div>
+          <p>
+            The walkthrough is structured as a pre-watch ritual: identify the show, set the boundary, rebuild the mental model, then press play.
+          </p>
+        </div>
+
+        <div class="flow" aria-label="Prototype walkthrough flow chart">
+          <svg width="1120" height="340" viewBox="0 0 1120 340" role="img">
+            <defs>
+              <linearGradient id="g" x1="0" x2="1">
+                <stop offset="0%" stop-color="#4dd4ac" />
+                <stop offset="100%" stop-color="#ffb454" />
+              </linearGradient>
+              <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#738094" />
+              </marker>
+            </defs>
+
+            <rect x="20" y="40" width="148" height="80" rx="14" fill="#1d2430" stroke="#303a49" />
+            <text x="94" y="72" text-anchor="middle" font-size="15" font-weight="700">Landing</text>
+            <text x="94" y="96" text-anchor="middle" font-size="12" fill="#a8b3c4">Name the pain</text>
+
+            <line x1="168" y1="80" x2="214" y2="80" stroke="#738094" stroke-width="2" marker-end="url(#arrow)" />
+            <rect x="216" y="40" width="148" height="80" rx="14" fill="#1d2430" stroke="#303a49" />
+            <text x="290" y="72" text-anchor="middle" font-size="15" font-weight="700">Demo login</text>
+            <text x="290" y="96" text-anchor="middle" font-size="12" fill="#a8b3c4">Remove setup</text>
+
+            <line x1="364" y1="80" x2="410" y2="80" stroke="#738094" stroke-width="2" marker-end="url(#arrow)" />
+            <rect x="412" y="40" width="148" height="80" rx="14" fill="#1d2430" stroke="#303a49" />
+            <text x="486" y="72" text-anchor="middle" font-size="15" font-weight="700">Bookshelf</text>
+            <text x="486" y="96" text-anchor="middle" font-size="12" fill="#a8b3c4">The Boys ready</text>
+
+            <line x1="560" y1="80" x2="606" y2="80" stroke="#738094" stroke-width="2" marker-end="url(#arrow)" />
+            <rect x="608" y="40" width="148" height="80" rx="14" fill="#1d2430" stroke="#303a49" />
+            <text x="682" y="72" text-anchor="middle" font-size="15" font-weight="700">Boundary</text>
+            <text x="682" y="96" text-anchor="middle" font-size="12" fill="#a8b3c4">Last watched</text>
+
+            <line x1="756" y1="80" x2="802" y2="80" stroke="#738094" stroke-width="2" marker-end="url(#arrow)" />
+            <rect x="804" y="40" width="148" height="80" rx="14" fill="url(#g)" opacity="0.95" />
+            <text x="878" y="72" text-anchor="middle" font-size="15" font-weight="800" fill="#07100c">Spoiler banner</text>
+            <text x="878" y="96" text-anchor="middle" font-size="12" fill="#07100c">Trust contract</text>
+
+            <path d="M 878 120 C 878 168, 94 150, 94 190" fill="none" stroke="#738094" stroke-width="2" marker-end="url(#arrow)" />
+
+            <rect x="20" y="190" width="148" height="86" rx="14" fill="#1d2430" stroke="#303a49" />
+            <text x="94" y="223" text-anchor="middle" font-size="15" font-weight="700">Season recap</text>
+            <text x="94" y="248" text-anchor="middle" font-size="12" fill="#a8b3c4">Fast context</text>
+
+            <line x1="168" y1="233" x2="214" y2="233" stroke="#738094" stroke-width="2" marker-end="url(#arrow)" />
+            <rect x="216" y="190" width="148" height="86" rx="14" fill="#1d2430" stroke="#303a49" />
+            <text x="290" y="223" text-anchor="middle" font-size="15" font-weight="700">Timeline</text>
+            <text x="290" y="248" text-anchor="middle" font-size="12" fill="#a8b3c4">How we got here</text>
+
+            <line x1="364" y1="233" x2="410" y2="233" stroke="#738094" stroke-width="2" marker-end="url(#arrow)" />
+            <rect x="412" y="190" width="148" height="86" rx="14" fill="#1d2430" stroke="#303a49" />
+            <text x="486" y="223" text-anchor="middle" font-size="15" font-weight="700">Story-state map</text>
+            <text x="486" y="248" text-anchor="middle" font-size="12" fill="#a8b3c4">Who stands where</text>
+
+            <line x1="560" y1="233" x2="606" y2="233" stroke="#738094" stroke-width="2" marker-end="url(#arrow)" />
+            <rect x="608" y="190" width="148" height="86" rx="14" fill="#1d2430" stroke="#303a49" />
+            <text x="682" y="223" text-anchor="middle" font-size="15" font-weight="700">Secrets + power</text>
+            <text x="682" y="248" text-anchor="middle" font-size="12" fill="#a8b3c4">Who knows what</text>
+
+            <line x1="756" y1="233" x2="802" y2="233" stroke="#738094" stroke-width="2" marker-end="url(#arrow)" />
+            <rect x="804" y="190" width="148" height="86" rx="14" fill="#1d2430" stroke="#303a49" />
+            <text x="878" y="223" text-anchor="middle" font-size="15" font-weight="700">Checklist</text>
+            <text x="878" y="248" text-anchor="middle" font-size="12" fill="#a8b3c4">Ready to watch</text>
+
+            <line x1="952" y1="233" x2="998" y2="233" stroke="#738094" stroke-width="2" marker-end="url(#arrow)" />
+            <rect x="1000" y="190" width="100" height="86" rx="14" fill="#252e3c" stroke="#4dd4ac" />
+            <text x="1050" y="223" text-anchor="middle" font-size="15" font-weight="700">Survey</text>
+            <text x="1050" y="248" text-anchor="middle" font-size="12" fill="#a8b3c4">Trust signal</text>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Metrics and eval</div>
+            <h2>Generated eval says: safe, grounded, but not complete enough under sparse facts.</h2>
+          </div>
+          <p>
+            The eval tested whether the prompt could produce bounded recap artifacts using only supplied show, episode, user-note, and source-fact inputs.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card">
+            <div class="metric"><strong>4.49</strong><span>Overall / 5</span></div>
+            <div class="bar"><div class="fill" style="width:89.8%;"></div></div>
+            <p class="muted" style="margin-top:14px;">Good enough to validate direction, not enough to ship broadly.</p>
+          </div>
+          <div class="card">
+            <div class="metric"><strong>0</strong><span>Run errors</span></div>
+            <div class="bar"><div class="fill" style="width:100%;"></div></div>
+            <p class="muted" style="margin-top:14px;">Seven generated cases completed without execution errors.</p>
+          </div>
+          <div class="card">
+            <div class="metric"><strong>Iterate</strong><span>Threshold read</span></div>
+            <p class="muted">The model refused spoilers, but sparse source facts produced thin outputs.</p>
+          </div>
+        </div>
+
+        <div style="margin-top:16px;" class="grid-2">
+          <div class="card">
+            <h3>Criterion scores</h3>
+            <table>
+              <tbody>
+                <tr><td>Spoiler boundary</td><td class="accent"><strong>5.00 / 5</strong></td></tr>
+                <tr><td>Hallucination grounding</td><td><strong>4.71 / 5</strong></td></tr>
+                <tr><td>Story-state correctness</td><td><strong>4.71 / 5</strong></td></tr>
+                <tr><td>Structural completeness</td><td class="warning"><strong>4.14 / 5</strong></td></tr>
+                <tr><td>Watch readiness</td><td class="warning"><strong>3.86 / 5</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="card">
+            <h3>What the eval proved</h3>
+            <p class="muted">
+              The model can respect a spoiler boundary and avoid fabrication when instructed to use only supplied facts.
+            </p>
+            <h3 style="margin-top:22px;">What remains unproven</h3>
+            <p class="muted">
+              The system cannot reliably produce rich relationship maps, secrets tables, and readiness anchors when source facts are sparse or unsupported.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Strategic recommendation</div>
+            <h2>Build the data layer before scaling the catalog.</h2>
+          </div>
+        </div>
+
+        <div class="card rec">
+          <h3>Recommendation</h3>
+          <p class="lead" style="font-size:21px;margin-bottom:0;">
+            Do not make the model more confident. Make the inputs more trustworthy. The next build should convert open-source recap material into structured, episode-bounded facts, then generate full modules only when coverage is high enough.
+          </p>
+        </div>
+
+        <div style="margin-top:16px;" class="grid-3">
+          <div class="card">
+            <div class="pill">01</div>
+            <h3 style="margin-top:16px;">Structure source facts</h3>
+            <p class="muted">Extract plot events, character status, relationships, secrets, knowledge holders, power shifts, unresolved threads, and ready-to-watch anchors.</p>
+          </div>
+          <div class="card">
+            <div class="pill">02</div>
+            <h3 style="margin-top:16px;">Tag every boundary</h3>
+            <p class="muted">Attach show, season, episode, source, confidence, and viewer-safe boundary to each fact. Tag secrets by who knows them.</p>
+          </div>
+          <div class="card">
+            <div class="pill">03</div>
+            <h3 style="margin-top:16px;">Gate generation</h3>
+            <p class="muted">Require minimum fact coverage before producing relationship maps, secrets tables, and checklists. Fall back honestly when coverage is weak.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap sources">
+    <p>
+      Sources: 
+      <a href="../01-research/tv-recap-user-research.md">User research synthesis</a> |
+      <a href="../02-competitive-analysis/tv-recap-competitive-analysis.md">Competitive analysis</a> |
+      <a href="../03-prd-and-evals/results.generated.md">Generated eval results</a> |
+      <a href="portfolio-case-study.md">Portfolio case study</a> |
+      <a href="prototype-walkthrough.md">Prototype walkthrough</a>
+    </p>
+  </footer>
+</body>
+</html>
