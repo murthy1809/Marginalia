@@ -39,7 +39,7 @@ Marginalia TV focuses on story-state restoration instead of generic summarizatio
 
 ## Product Artifacts
 
-- [Executive summary HTML](05-product-design-story/marginalia-tv-executive-summary.html)
+- [Executive summary HTML](https://prototypemarginalia.netlify.app/marginalia-tv-executive-summary.html)
 - [Portfolio case study](05-product-design-story/portfolio-case-study.md)
 - [Product design framing](05-product-design-story/product-design-framing.md)
 - [Prototype walkthrough](05-product-design-story/prototype-walkthrough.md)
