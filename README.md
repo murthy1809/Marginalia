@@ -3,6 +3,7 @@
 Marginalia TV is a spoiler-safe story-state recap prototype for viewers returning to serialized TV shows after long gaps.
 
 **Live demo:** [prototypemarginalia.netlify.app/app/recap/the-boys-s4-finale](https://prototypemarginalia.netlify.app/app/recap/the-boys-s4-finale)
+
 **Executive Summary:** [Executive Summary](https://prototypemarginalia.netlify.app/marginalia-tv-executive-summary.html)
 
 ## Product Bet
